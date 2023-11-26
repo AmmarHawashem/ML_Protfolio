@@ -19,7 +19,7 @@ st.text("Deployment Project")
 # Header/Subheader
 st.header('What are we?')
 st.text("We are a beutiful group who created this app to give you an estimate of your dream car")
-st.text("To give you an accurate price, please provide the following infromation")
+st.text("To give you an accurate price in $, please provide the following infromation")
 
 ################################################################################################################
 # table  of features
@@ -247,3 +247,4 @@ predict = st.button("Predict")
 result = model.predict(df)
 if predict :
     st.success(round(result[0],0))
+    st.write("price in $:", round(result[0],0) )
